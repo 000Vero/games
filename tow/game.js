@@ -43,11 +43,13 @@ function tug(amount) {
 
     if (position == 100) {
         lBar.style.borderTopRightRadius = lBar.style.borderBottomRightRadius = "var(--bulma-radius-rounded)";
+        rBar.style.visibility = "hidden";
         announcer.innerText = "Blue wins! ";
         announcer.innerHTML += restartButton;
         started = false;
     } else if (position == 0) {
         rBar.style.borderTopLeftRadius = rBar.style.borderBottomLeftRadius = "var(--bulma-radius-rounded)";
+        lBar.style.visibility = "hidden";
         announcer.innerText = "Red wins! ";
         announcer.innerHTML += restartButton;
         started = false;
@@ -61,6 +63,7 @@ function restart() {
     lBar.style.width = "50%";
     rBar.style.width = "50%";
     lBar.style.borderTopRightRadius = lBar.style.borderBottomRightRadius = rBar.style.borderTopLeftRadius = rBar.style.borderBottomLeftRadius = "0px";
+    lBar.style.visibility = rBar.style.visibility = "visible";
     timeToStart = 3000;
     announcer.innerText = timeToStart / 1000;
     interval = setInterval(startGame, 1000);
