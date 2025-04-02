@@ -1,3 +1,12 @@
+/* ===== GAME SETUP ===== */
+if (window.innerHeight > window.innerWidth) {
+    document.body.innerHTML = '<span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" class="is-size-1">Please rotate your device in landscape mode</span>';
+}
+
+window.onresize = function() {
+    window.location.reload();
+}
+
 /* ===== GAME VARIABLES ===== */
 
 const lBar = document.getElementById("lBar");
