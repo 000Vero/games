@@ -1,10 +1,14 @@
 /* ===== GAME SETUP ===== */
+
+var incompatible = false;
+
 if (window.innerHeight > window.innerWidth) {
+    incompatible = true;
     document.body.innerHTML = '<span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" class="is-size-1">Please rotate your device in landscape mode</span>';
 }
 
 window.onresize = function() {
-    if (window.innerHeight > window.innerWidth) window.location.reload();
+    if (incompatible) window.location.reload();
 }
 
 /* ===== GAME VARIABLES ===== */
