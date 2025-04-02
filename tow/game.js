@@ -4,7 +4,7 @@ if (window.innerHeight > window.innerWidth) {
 }
 
 window.onresize = function() {
-    window.location.reload();
+    if (window.innerHeight > window.innerWidth) window.location.reload();
 }
 
 /* ===== GAME VARIABLES ===== */
