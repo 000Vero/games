@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tug of war</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <span class="is-size-1 block" id="announcer">3</span>
+        <div id="tugbar">
+            <div id="lBar"></div>
+            <div id="rBar"></div>
+        </div>
+        <div id="buttons">
+            <button class="button is-size-3" id="tleft" onclick="tug(-1)">Tug left</button>
+            <button class="button is-size-3" id="tright" onclick="tug(1)">Tug right</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
